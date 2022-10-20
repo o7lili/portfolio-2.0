@@ -1,38 +1,321 @@
-.App {
-  text-align: center;
+/* color var */
+:root {
+  --background-color: whitesmoke;
+  --header-color: #e8f6dd;
+  --primary-color: beige;
+  --secondary-color: darkolivegreen;
+  --tertiary-color: #88B497;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* remove default browser-enforced styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* general page styles */
+bodyDiv {
+  background-color: var(--background-color);
+  font-family:'Courier New', Courier, monospace, serif;
+  color: var(--secondary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+}
+
+/* <header> STYLES START */
+header {
+  width:100%;
+  background-color: var(--header-color);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0 20px 0;
   align-items: center;
+}
+
+/* <header> h1 style */
+header h1 {
+  font-size: 45px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  display: flex;
+  padding: 0 10px 0 60px;
+}
+/* <header> a style, credit: Jeff Starr https://wp-mix.com/css-hover-link-slide-up-background/ */
+header a {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  padding: 5px;
+  color: var(--secondary-color);
+  background-color: var(--header-color);
+  vertical-align: bottom;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  background-size: 100% 200%;
+  background-position: 0 -100%;
+  background-image: linear-gradient(to top, transparent 50%, var(--secondary-color) 50%);
+}
+
+/* header links hover style */
+header a:hover {
+  color: var(--primary-color);
+  background-position: 0 0;
+}
+
+/* <header> nav-bar styles */
+header nav {
+  margin: 7px 0;
+  padding-right: 80px;
+}
+/* <header> nav and ul styles */
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+/* <header> nav, ul, and li styles */
+header nav ul li a {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 5px;
+  border-bottom: 3px solid var(--secondary-color);
+} 
+/* END HEADER STYLES */
+
+/* HERO STYLES START */
+.hero {
+  background-size: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  height: 300px;
+  margin-bottom: 25px;
+  background-position: bottom;
+  position: relative;
+}
+
+.hero img {
+  position: absolute;
+  left: 180px;
+  top: 50px;
+}
+
+.subtitle {
+  position: absolute;
+  top: 75%;
+  left: 82%;
+  padding: 5px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+}
+/* END HERO STYLES */
+
+/* <content> styles */
+content {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* title-panel styles */
+.title-panel {
+  flex: 0 0 20%;
+  border-right: 5px solid var(--secondary-color);
+  font-size: 25px;
+  text-align: right;
+  margin-right: 40px;
+  padding-right: 15px;
+  line-height: 1.1;
+}
+
+.title-panel > h2 {
+  flex: 0 0 20%
+}
+
+
+/* about SECTION STYLES START */
+.about {
+  /* display: flex; */
+  border: left;
+  width: 100%;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  padding: 25px 0 25px 25px;
+}
+
+.about-container {
+  display: flex;
+  width: 80;
+}
+
+.about-text {
+  flex: 0 1 90%;
+  padding-left: 3%;
+  padding-right: 1%;
+  font-size: 20px;
+}
+/* END about SECTION STYLES */
+
+/* work SECTION STYLES START */
+.work {
+  /* display: flex; */
+  flex-wrap: wrap;
+  border: left;
+  width:100%;
+  flex: 1 1 100%;
+  padding: 25px 0 25px 25px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.projects img {
+  max-width: 100%;
+  flex: 1;
+  opacity: 0.75;
+  transition: opacity .3s ease-out;
+  border: 5px solid var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.projects img:hover {
+  box-shadow: 0 0 50px 0 var(--secondary-color);
+  opacity: 1;
+}
+
+
+.project-text {
+  position: relative;
+  bottom: 80px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px;
+  flex-wrap: wrap;
+  max-width: 200px;
+  flex: none;
+}
+
+.projects-flex {
+  flex: 1 - 30%;
+  width: 100%;
+  margin: 1%;
+  width: 441px;
+  height: auto;
+}
+/* END work SECTION STYLES */
+
+/* contact SECTION STYLES START */
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 10px 0;
+  padding: 25px 0 25px 25px;
+}
+
+.contact-info {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.contact-info ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-info li {
+  padding: 10px 40px;
+  display: inline;
+  margin: 0 20px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+/* END contact SECTION STYLES */
+
+/* START MEDIA QUERIES STYLES */
+/* smaller desktop screens and smaller */
+@media screen and (max-width: 980px) {
+  header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 20px;
+  }
+
+  header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+  }
+
+  header nav ul li a {
+      font-size: 20px;
+  }
+
+  .about, .work, .contact {
+      justify-content: center;
+  }
+
+  .title-panel > h2 {
+      flex: 0 0 100%;
+      justify-content: center;
+      border-bottom: 4px solid var(--secondary-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+      font-size: 50px;
+  }
+
+  .title-panel {
+      border-right: none;
+  }
+
+  .projects, .projects > a {
+      flex: 0 0 100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .projects > a {
+      min-height: 150px;
+      flex-basis: 100%;
+  }
+
+  .projects-flex,
+  .projects-flex > div {
+      flex-basis: 100%;
+  }
+
+  .projects-flex > div {
+      min-height: 150px;
+  }
+
+  .hero {
+      justify-content: center;
+      text-align: center;
+  }
+
+  .contact-info {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+
