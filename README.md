@@ -3,6 +3,7 @@
 ## Description
 Second version of my portfolio using React.
 
+![image](https://user-images.githubusercontent.com/103470899/197085927-aedc5487-740d-411c-b91a-97ae8dff00d6.png)
 
 
 # Getting Started with Create React App
