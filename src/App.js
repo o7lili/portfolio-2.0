@@ -30,8 +30,8 @@ function App() {
             </nav>
         </div>
     </header>
-    <section class="hero" style={{ backgroundImage: `url(/images/hero.jpg)`}}>
-        <img class="pfp" src="/images/pfp.png" />
+    <section class="hero" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/hero.jpg)`}}>
+        <img class="pfp" src={`${process.env.PUBLIC_URL}/images/pfp.png`} />
         <h3 class="subtitle">UNC Coding Bootcamp Student</h3>
     </section>
 
@@ -55,7 +55,7 @@ function App() {
                     <div class="grid grid-cols-4">
                         <div class="col-span-4">
                             <a href="https://hidden-shelf-57015.herokuapp.com/" target="_blank">
-                                <img src="/images/to-dine-for.jpg" id="to-dine-list" alt="" width="100%" />
+                                <img src={`${process.env.PUBLIC_URL}/images/to-dine-for.jpg`} id="to-dine-list" alt="" width="100%" />
                                 <div class="project-text">
                                     <h3>To-Dine List</h3>
                                     <p>CSS/Materialize, Handlebars.js, Express.js, Node.js, JavaScript, MySQL, Sequelize</p>
@@ -66,21 +66,21 @@ function App() {
                           <SmallProjectCard 
                             href={"https://o7lili.github.io/run-buddy/"}
                             github={"https://github.com/o7lili/run-buddy"}
-                            imgSrc={"/images/run-buddy.jpg"} 
+                            imgSrc={`${process.env.PUBLIC_URL}/images/run-buddy.jpg`} 
                             title={"Run Buddy"}
                             description={"HTML, CSS"}
                           />
                           <SmallProjectCard 
                             href={"https://o7lili.github.io/Horiseon-Challenge1-LP/"}
                             github={"https://github.com/o7lili/Horiseon-Challenge1-LP"}
-                            imgSrc={"/images/horiseon.jpg"} 
+                            imgSrc={`${process.env.PUBLIC_URL}/images/horiseon.jpg`} 
                             title={"Horiseon"}
                             description={"HTML, CSS"}
                           />
                           <SmallProjectCard
                             href={"https://o7lili.github.io/weather-dashboard/"}
                             github={"https://github.com/o7lili/weather-dashboard"}
-                            imgSrc={"/images/weather-dashboard.jpg"}
+                            imgSrc={`${process.env.PUBLIC_URL}/images/weather-dashboard.jpg`}
                             title={"Weather Dashboard"}
                             description={"HTML, CSS, JavaScript"}
                           />
@@ -89,14 +89,14 @@ function App() {
                           <SmallProjectCard 
                             href={"https://parariot.github.io/DIY-Bartender/"}
                             github={"https://github.com/parariot/DIY-Bartender"}
-                            imgSrc={"/images/DIY-bartender.jpg"} 
+                            imgSrc={`${process.env.PUBLIC_URL}/images/DIY-bartender.jpg`} 
                             title={"DIY Bartender"}
                             description={"HTML, CSS/Tailwind, JavaScript"}
                           />
                           <SmallProjectCard 
                             href={"https://damp-chamber-78850.herokuapp.com/"}
                             github={"https://github.com/o7lili/blog-it-up"}
-                            imgSrc={"/images/blog-it-up.jpg"} 
+                            imgSrc={`${process.env.PUBLIC_URL}/images/blog-it-up.jpg`} 
                             title={"Blog It Up"}
                             description={"mySQL, Handlebars, Sequelize, Express"}
                           />
