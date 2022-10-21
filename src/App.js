@@ -23,8 +23,9 @@ function App() {
             <nav>
                 <ul>
                     <li><a href="#about">about</a></li>
-                    <li><a href="#work">work</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#contact">contact</a></li>
+                    <li><a href="#resume">resume</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,7 +38,7 @@ function App() {
     <main class="container">
         <section id="about" class="about grid grid-cols-3">
             <section class="title-panel">
-                <h2>about</h2>
+                <h2>about me</h2>
             </section>
             <section class="about-container col-span-2">
                 <div class="about-text">
@@ -46,9 +47,9 @@ function App() {
             </section>
         </section>
         <content>
-            <div id="work" class="work grid grid-cols-3">
+            <div id="portfolio" class="work grid grid-cols-3">
                 <section class="title-panel">
-                    <h2>work</h2>
+                    <h2>portfolio</h2>
                 </section>
                 <section class="projects col-span-2">
                     <div class="grid grid-cols-4">
@@ -64,29 +65,40 @@ function App() {
                         <div class="col-span-2">
                           <SmallProjectCard 
                             href={"https://o7lili.github.io/run-buddy/"}
+                            github={"https://github.com/o7lili/run-buddy"}
                             imgSrc={"/images/run-buddy.jpg"} 
                             title={"Run Buddy"}
                             description={"HTML, CSS"}
                           />
                           <SmallProjectCard 
                             href={"https://o7lili.github.io/Horiseon-Challenge1-LP/"}
+                            github={"https://github.com/o7lili/Horiseon-Challenge1-LP"}
                             imgSrc={"/images/horiseon.jpg"} 
                             title={"Horiseon"}
                             description={"HTML, CSS"}
+                          />
+                          <SmallProjectCard
+                            href={"https://o7lili.github.io/weather-dashboard/"}
+                            github={"https://github.com/o7lili/weather-dashboard"}
+                            imgSrc={"/images/weather-dashboard.jpg"}
+                            title={"Weather Dashboard"}
+                            description={"HTML, CSS, JavaScript"}
                           />
                         </div>
                         <div class="col-end-5 col-span-2">
                           <SmallProjectCard 
                             href={"https://parariot.github.io/DIY-Bartender/"}
+                            github={"https://github.com/parariot/DIY-Bartender"}
                             imgSrc={"/images/DIY-bartender.jpg"} 
                             title={"DIY Bartender"}
                             description={"HTML, CSS/Tailwind, JavaScript"}
                           />
                           <SmallProjectCard 
-                            href={""}
-                            imgSrc={"/images/dummy-img3.jpg"} 
-                            title={"Project #5"}
-                            description={"details"}
+                            href={"https://damp-chamber-78850.herokuapp.com/"}
+                            github={"https://github.com/o7lili/blog-it-up"}
+                            imgSrc={"/images/blog-it-up.jpg"} 
+                            title={"Blog It Up"}
+                            description={"mySQL, Handlebars, Sequelize, Express"}
                           />
                         </div>
                     </div>
@@ -99,12 +111,34 @@ function App() {
                     <h2>contact</h2>
                 </section>
                 <section class="contact-info col-span-2">
-                    <ul>
-                        <li>555.555.555</li>
-                        <li>email@website.com</li>
-                        <li><a href="https://github.com/o7lili" target="_blank">GitHub</a></li>
-                        <li>LinkedIn</li>
-                    </ul>
+                    <div>
+                      <form action="#">
+                        <ul>
+
+                          <li>
+                            <p>
+                              <label for="name">Name</label>
+                              <input type="text" name="name" placeholder="Name" />
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <label for="email">Email</label>
+                              <input type="text" name="email" placeholder="Email" />
+                            </p>
+                          </li>
+                          <li>
+                            <label for="message">Message</label>
+                            <textarea cols="46" rows="3" name="message" placeholder="Message" />
+                          </li>
+
+                          <li>
+                            <input class="btn btn-submit" type="submit" value="Submit" />
+                          </li>
+
+                        </ul>
+                      </form>
+                    </div>
                 </section>
             </div>
         </content>
