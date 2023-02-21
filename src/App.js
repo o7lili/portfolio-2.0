@@ -54,11 +54,11 @@ function App() {
                 <section class="projects col-span-2">
                     <div class="grid grid-cols-4">
                         <div class="col-span-4">
-                            <a href="https://hidden-shelf-57015.herokuapp.com/" target="_blank">
-                                <img src={`${process.env.PUBLIC_URL}/images/to-dine-for.jpg`} id="to-dine-list" alt="" width="100%" />
+                            <a href="https://stark-castle-18267.herokuapp.com/" target="_blank">
+                                <img src={`${process.env.PUBLIC_URL}/images/dungeon-chest.jpg`} id="dungeon-chest" alt="" width="100%" />
                                 <div class="project-text">
-                                    <h3>To-Dine List</h3>
-                                    <p>CSS/Materialize, Handlebars.js, Express.js, Node.js, JavaScript, MySQL, Sequelize</p>
+                                    <h3>Dungeon Chest</h3>
+                                    <p>Tailwinds, Express.js, Node.js, JavaScript, MongoDB, GraphQL</p>
                                 </div>
                             </a>
                         </div>
@@ -99,6 +99,13 @@ function App() {
                             imgSrc={`${process.env.PUBLIC_URL}/images/blog-it-up.jpg`} 
                             title={"Blog It Up"}
                             description={"mySQL, Handlebars, Sequelize, Express"}
+                          />
+                          <SmallProjectCard 
+                            href={"https://hidden-shelf-57015.herokuapp.com/"}
+                            github={"https://github.com/crisdege/to-dine-list"}
+                            imgSrc={`${process.env.PUBLIC_URL}/images/to-dine-for.jpg`} 
+                            title={"To-Dine List"}
+                            description={"CSS/Materialize, Handlebars.js, Express.js, Node.js, JavaScript, MySQL, Sequelize"}
                           />
                         </div>
                     </div>
