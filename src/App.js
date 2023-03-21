@@ -42,7 +42,7 @@ function App() {
             </section>
             <section class="about-container col-span-2">
                 <div class="about-text">
-                    <p>Currently a Project Coordinator for a metal fabrication company for 4 1/2 years. Recently graduated from the UNC Coding Boot camp November '22 and working on breaking into the web development world. </p>
+                    <p>Spent the last 5 years as a Project Coordinator for a metal fabrication company, completed the UNC Coding Bootcamp November '22 and currently working on honing in the skills learned from the bootcamp to break into the web development world. </p>
                 </div>
             </section>
         </section>
